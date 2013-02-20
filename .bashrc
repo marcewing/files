@@ -1,4 +1,30 @@
-# export WORKON_HOME=~/Environments; export PROJECT_HOME=~/Development; source /usr/local/bin/virtualenvwrapper.sh;
+# Put everything here!!
+
+# Source it from .bash_profile
+
+export PATH="~/bin:/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/local/mysql/bin:/Developer/usr/bin:$PATH"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+export EDITOR='mate -w'
+export PS1='\u@\h \W \$ '
+
+alias sl=ls
+alias more=less
+
+# Set architecture flags - no idea why
+export ARCHFLAGS="-arch x86_64"
+
+# Virtualenv wrapper is cool
+export WORKON_HOME=~/Environments; 
+export PROJECT_HOME=~/Development; 
+source /usr/local/bin/virtualenvwrapper.sh;
+
+
+###############################
+
+# This is a bunch of ssh magic
 
 SSH_ENV="$HOME/.ssh/environment"
   
