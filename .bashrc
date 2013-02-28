@@ -12,6 +12,8 @@ export PS1='\u@\h \W \$ '
 
 alias sl=ls
 alias more=less
+alias m=less
+alias gs="git status"
 
 # Set architecture flags - no idea why
 export ARCHFLAGS="-arch x86_64"
@@ -20,6 +22,44 @@ export ARCHFLAGS="-arch x86_64"
 export WORKON_HOME=~/Environments; 
 export PROJECT_HOME=~/Development; 
 source /usr/local/bin/virtualenvwrapper.sh;
+
+
+###############################
+
+###############################
+# CDS
+
+cds() {
+        if [ $# -ne 1 ]; then
+                echo "usage: cds pattern"
+                return
+        fi
+        set "foo" `fgrep $1 $HOME/.dirs`
+        if [ $# -eq 1 ]; then
+                echo "No matches"
+        elif [ $# -eq 2 ]; then
+                cd $2
+        else
+                shift
+                for x in $@; do
+                        echo $x
+                done | nl -n ln
+                echo -n "Number: "
+                read C
+                if [ "$C" = "0" -o -z "$C" ]; then
+                        return
+                fi
+                eval D="\${$C}"
+                if [ -n "$D" ]; then
+                        #echo $D
+                        cd $D
+                fi
+        fi
+}
+
+cdsload() { 
+    find / -type d > $HOME/.dirs 
+}
 
 
 ###############################
