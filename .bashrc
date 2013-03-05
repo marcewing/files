@@ -12,7 +12,7 @@ export PS1='\u@\h \W \$ '
 
 alias sl=ls
 alias more=less
-alias m=less
+alias m=mate
 alias gs="git status"
 
 # Set architecture flags - no idea why
