@@ -1,0 +1,37 @@
+#!/bin/bash
+
+###############################
+# CDS
+
+cds() {
+        if [ $# -ne 1 ]; then
+                echo "usage: cds pattern"
+                return
+        fi
+        set "foo" `fgrep $1 $HOME/.dirs`
+        if [ $# -eq 1 ]; then
+                echo "No matches"
+        elif [ $# -eq 2 ]; then
+                cd $2
+        else
+                shift
+                for x in $@; do
+                        echo $x
+                done | nl -n ln
+                echo -n "Number: "
+                read C
+                if [ "$C" = "0" -o -z "$C" ]; then
+                        return
+                fi
+                eval D="\${$C}"
+                if [ -n "$D" ]; then
+                        #echo $D
+                        cd $D
+                fi
+        fi
+}
+
+cdsload() { 
+    find / -type d > $HOME/.dirs 
+}
+
