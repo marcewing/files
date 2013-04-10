@@ -9,3 +9,9 @@ Host github.com
 	User git
 	IdentityFile ~/.ssh/github
 	IdentitiesOnly yes
+
+Host ci
+	HostName ci.riot9.com
+	User ubuntu
+	IdentityFile ~/.ssh/sean-riot9-ec2.txt
+	IdentitiesOnly yes
