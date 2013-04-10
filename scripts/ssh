@@ -48,4 +48,4 @@ else
     fi
 fi
 
-ssh-add ~/.ssh/github
+ssh-add ~/.ssh/github 2> /dev/null
