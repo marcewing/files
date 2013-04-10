@@ -44,5 +44,5 @@ export PROJECT_HOME=~/Development;
 source /usr/local/bin/virtualenvwrapper.sh;
 
 # Not sure why I have to redo this PATH
-export PATH=/usr/local/bin:/Developer/usr/bin$PATH
+export PATH=/usr/local/bin:/Developer/usr/bin:$PATH
 export PATH=/usr/local/heroku/bin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH
