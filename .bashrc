@@ -4,7 +4,7 @@ export BASH_ENV="~/.bashrc"
 
 # Source it from .bash_profile
 
-export PATH="~/bin:/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/local/mysql/bin:/Developer/usr/bin:$PATH"
+export PATH="~/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/local/mysql/bin:/Developer/usr/bin:$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
